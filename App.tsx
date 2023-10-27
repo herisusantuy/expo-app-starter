@@ -1,15 +1,21 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
-import ThemeProvider from './src/contexts/ThemeContext';
+import { Provider } from 'react-redux';
 
-export default function App() {
+import ThemeProvider from '@contexts/ThemeContext';
+import ModalProvider from '@contexts/ModalContext';
+import RootStackNavigation from '@navigations/root-stack';
+import { store } from './src/store';
+
+export default function App(): JSX.Element {
   return (
-    <ThemeProvider>
-      <View style={styles.container}>
-        <Text>Open up App.tsx to start working on your app!</Text>
-        <StatusBar style='dark' />
-      </View>
-    </ThemeProvider>
+    <Provider store={store}>
+      <ThemeProvider>
+        <ModalProvider>
+          <RootStackNavigation />
+        </ModalProvider>
+      </ThemeProvider>
+    </Provider>
   );
 }
 
