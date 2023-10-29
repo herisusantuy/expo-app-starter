@@ -7,7 +7,9 @@
       "@contexts/*": ["src/contexts/*"],
       "@navigations/*": ["src/navigations/*"],
       "@screens/*": ["src/screens/*"],
-      "@hooks/*": ["src/hooks/*"]
+      "@hooks/*": ["src/hooks/*"],
+      "@utils/*": ["src/utils/*"],
+      "@components/*": ["src/components/*"]
     }
   }
 }
