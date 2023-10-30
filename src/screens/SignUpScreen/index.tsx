@@ -1,6 +1,6 @@
 import React from 'react';
 import { View, Text } from 'react-native';
-import { ScreenProps } from '../../navigations/root-stack';
+import { ScreenProps } from '@navigations/root-stack';
 
 const SignUpScreen: ScreenProps<'SignUp'> = () => {
   return (
