@@ -28,7 +28,7 @@ const RootStackNavigation = () => {
 
   return (
     <NavigationContainer theme={theme === 'light' ? DefaultTheme : DarkTheme}>
-      {!auth.token ? <AuthStackNavigator /> : <AppStackNavigator />}
+      {auth.token ? <AuthStackNavigator /> : <AppStackNavigator />}
     </NavigationContainer>
   );
 };
