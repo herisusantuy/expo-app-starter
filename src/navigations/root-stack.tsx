@@ -6,8 +6,9 @@ import {
 } from '@react-navigation/native';
 import type { NativeStackScreenProps } from '@react-navigation/native-stack';
 
-import AppStackNavigator, { AppStackParamList } from './app-stack';
+import AppStackNavigator, { AppStackParamList } from './bottom-tab';
 import AuthStackNavigator, { AuthStackParamList } from './auth-stack';
+import DrawerNavigator from './drawer-navigator';
 
 import useTheme from '@hooks/useTheme';
 import useAuth from '@hooks/useAuth';
@@ -28,7 +29,7 @@ const RootStackNavigation = () => {
 
   return (
     <NavigationContainer theme={theme === 'light' ? DefaultTheme : DarkTheme}>
-      {auth.token ? <AuthStackNavigator /> : <AppStackNavigator />}
+      {auth.token ? <AuthStackNavigator /> : <DrawerNavigator />}
     </NavigationContainer>
   );
 };

@@ -2,12 +2,12 @@ import React from 'react';
 import { View, Text } from 'react-native';
 import { ScreenProps } from '../../navigations/root-stack';
 
-const SearchScreen: ScreenProps<'Search'> = () => {
+const ProfileScreen: ScreenProps<'Profile'> = () => {
   return (
     <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-      <Text>Search Screen</Text>
+      <Text> Profile Screen</Text>
     </View>
   );
 };
 
-export default SearchScreen;
+export default ProfileScreen;
